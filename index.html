@@ -41,10 +41,6 @@
                     <a href="#" <i class='bx bxl-twitter'></i></a>
                     
                 </div>
-                <div class="btn-group">
-                    <a href="#contact" class="btn">Contact</a>
-                    <a href="#"></a>
-                </div>
             </div>
 
             <div class="home-img">
@@ -68,35 +64,39 @@
         </section>
 
         <!-- Certified Section -->
-    <section id="Certified" class="certified-section">
-        <h1 style="margin-top: 70px;">My Certifications</h1>
-        <div class="certificates-container">
-            <!-- Certificate 1 -->
-            <div class="certificate">
-                <img src="./img/Algorithm.jpg" alt="Certificate 1">
-                <h3>Algorithm & Progamming</h3>
-                <p>Issued by: Camp404</p>
-                <p>Date: January 2021</p>
+        <section id="Certified" class="certified-section">
+            <h1 style="margin-top: 70px;">My Certifications</h1>
+            <div class="certificates-container">
+                <!-- Certificate 1 -->
+                <div class="certificate">
+                    <img src="./img/Algorithm.jpg" alt="Certificate 1">
+                    <h3>Algorithm & Progamming</h3>
+                    <p>Issued by: Camp404</p>
+                    <p>Date: January 2021</p>
+                </div>
+                <!-- Certificate 2 -->
+                <div class="certificate">
+                    <img src="./img/Networking.jpg" alt="Certificate 2">
+                    <h3>Networking Fundamentals</h3>
+                    <p>Issued by: Camp404</p>
+                    <p>Date: February 2021</p>
+                </div>
+                <!-- Certificate 3 -->
+                <div class="certificate">
+                    <img src="./img/Basic Web.jpg" alt="Certificate 3">
+                    <h3>Basic Web Progamming</h3>
+                    <p>Issued by: Camp404</p>
+                    <p>Date: March 2021</p>
+                </div>
             </div>
-            <!-- Certificate 2 -->
-            <div class="certificate">
-                <img src="./img/Networking.jpg" alt="Certificate 2">
-                <h3>Networking Fundamentals</h3>
-                <p>Issued by: Camp404</p>
-                <p>Date: February 2021</p>
-            </div>
-            <!-- Certificate 3 -->
-            <div class="certificate">
-                <img src="./img/Basic Web.jpg" alt="Certificate 3">
-                <h3>Basic Web Progamming</h3>
-                <p>Issued by: Camp404</p>
-                <p>Date: March 2021</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
 
        <script>
+        function toggleMenu() {
+            document.getElementById("navbar").classList.toggle("active");
+        }
+
         document.addEventListener("DOMContentLoaded", function () {
             const educationItems = document.querySelectorAll('.education-item');
 

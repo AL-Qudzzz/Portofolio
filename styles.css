@@ -14,10 +14,12 @@
   --text-color: white;
   --main-color: #00ffee;
 }
+
 html {
   font-size: 60%;
   overflow-x: hidden;
 }
+
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
@@ -25,8 +27,9 @@ body {
   margin: 0;
   padding: 0;
 }
+
 .header {
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
@@ -38,8 +41,9 @@ body {
   align-items: center;
   z-index: 5;
 }
+
 .logo {
-  font-size: 3rem;
+  font-size: 2rem;
   color: var(--text-color);
   font-weight: 800;
   cursor: pointer;
@@ -49,9 +53,11 @@ body {
 .logo:hover {
   transform: scale(1.1);
 }
+
 .logo span {
   text-shadow: 0 0 25px var(--main-color);
 }
+
 .navbar a {
   font-size: 1.8rem;
   color: var(--text-color);
@@ -60,11 +66,13 @@ body {
   transition: 0.3s ease;
   border-bottom: 3px solid transparent;
 }
+
 .navbar a:hover,
 .navbar a.active {
   color: var(--main-color);
   border-bottom: 3px solid var(--main-color);
 }
+
 #menu-icon {
   font-size: 3.6rem;
   color: var(--main-color);
@@ -72,15 +80,17 @@ body {
 }
 
 section {
-  min-height: 100vh;
+  min-height: 80vh;
   padding: 0 12% 0;
 }
+
 .home {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 15rem;
 }
+
 .home-content {
   display: flex;
   flex-direction: column;
@@ -89,26 +99,32 @@ section {
   justify-content: center;
   margin-top: 3rem;
 }
+
 span {
   color: var(--main-color);
 }
+
 .logo span {
   color: var(--main-color);
 }
+
 .home-content h3 {
   margin-bottom: 2rem;
   margin-top: 1rem;
   font-size: 3.5rem;
 }
+
 .home-content h1 {
   font-size: 7rem;
   font-weight: 700;
   margin-top: 1.5rem;
   line-height: 1;
 }
+
 .home-img {
   border-radius: 50%;
 }
+
 .home-img img {
   position: relative;
   top: 3rem;
@@ -118,16 +134,19 @@ span {
   cursor: pointer;
   transition: 0.4s ease-in-out;
 }
+
 .home-img img:hover {
   box-shadow: 0 0 25px var(--main-color), 0 0 50px var(--main-color),
     0 0 100px var(--main-color);
 }
+
 .home-content p {
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 1.8;
   max-width: 1000px;
 }
+
 .social-icons a {
   display: inline-flex;
   justify-content: center;
@@ -142,12 +161,14 @@ span {
   margin: 3rem 1.5rem 3rem;
   transition: 0.3s ease-in-out;
 }
+
 .social-icons a:hover {
   color: var(--text-color);
   transform: scale(1.3) translateY(-5px);
   box-shadow: 0 0 25px var(--main-color);
   background-color: var(--main-color);
 }
+
 .btn {
   display: inline-block;
   padding: 1rem 2.8rem;
@@ -167,11 +188,13 @@ span {
   transform: scale(1.05);
   box-shadow: 0 0 50px var(--main-color);
 }
+
 .btn-group {
   display: flex;
   align-items: center;
   gap: 1.5rem;
 }
+
 .btn-group a:nth-of-type(2) {
   background-color: black;
   color: var(--main-color);
@@ -194,11 +217,13 @@ span {
 .text-animation span {
   position: relative;
 }
+
 .text-animation span::before {
   content: "Web Developer";
   color: var(--main-color);
   animation: words 20s infinite;
 }
+
 .text-animation span::after {
   content: "";
   background-color: var(--bg-color);
@@ -215,6 +240,7 @@ span {
     border-left: 2px solid var(--main-color);
   }
 }
+
 @keyframes words {
   0%,
   20% {
@@ -229,6 +255,7 @@ span {
     content: "Networking Adm.";
   }
 }
+
 @keyframes typing {
   10%,
   15%,
@@ -255,7 +282,7 @@ span {
   }
 }
 
-/*Education--------------------------------------------------------------------------------------------*/
+/* Education */
 section.education {
   padding: 0 12% 0;
   text-align: left;
@@ -273,10 +300,11 @@ section.education {
 ul.education-list {
   list-style-type: none;
   padding-left: 0;
+  margin-bottom: 10px;
 }
 
 .education-item {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   font-size: 16px;
   display: flex;
   align-items: center;
@@ -305,7 +333,7 @@ ul.education-list {
   margin: 0;
 }
 
-/*Certified---------------------------------------------------------------------------------------------------*/
+/* Certified */
 .certified-section {
   padding: 0 12% 0;
   text-align: center;
@@ -315,7 +343,7 @@ ul.education-list {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 10px;
   margin-top: 50px;
 }
 
@@ -341,4 +369,97 @@ ul.education-list {
 
 .certificate p {
   font-size: 14px;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .home {
+    flex-direction: column;
+    gap: 5rem;
+  }
+
+  .home-content h1 {
+    font-size: 5rem;
+  }
+
+  .home-content h3 {
+    font-size: 2.5rem;
+  }
+
+  .navbar a {
+    font-size: 1.6rem;
+  }
+
+  #menu-icon {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 3rem 5%;
+  }
+
+  /* Hide header on mobile devices */
+  .header {
+    display: none;
+  }
+
+  .home-content h1 {
+    font-size: 4rem;
+  }
+
+  .home-content h3 {
+    font-size: 2rem;
+  }
+
+  .home-content p {
+    font-size: 1.2rem;
+  }
+
+  .social-icons a {
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 2rem;
+  }
+
+  .btn {
+    padding: 0.8rem 2rem;
+    font-size: 1.4rem;
+  }
+
+  .btn-group {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 2rem 5%;
+  }
+
+  .home-content h1 {
+    font-size: 3rem;
+  }
+
+  .home-content h3 {
+    font-size: 1.8rem;
+  }
+
+  .home-content p {
+    font-size: 1rem;
+  }
+
+  .btn {
+    padding: 0.5rem 1.5rem;
+    font-size: 1.2rem;
+  }
+
+  .education h2 {
+    font-size: 24px;
+  }
+
+  .certificate {
+    width: 90%;
+  }
 }
