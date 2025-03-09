@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Style Css -->
+        <link rel="stylesheet" href="styles.css">
+        <!-- Icons -->
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <title>Portfolio</title>
+    </head>
+    <body>
+        
+        <header class="header">
+
+            <a href="#home" class="logo">Muhammad
+                <span>Faiqul</span>
+                <i class='bx bx-menu' id="menu-icon"></i>
+            </a>
+            <nav class="navbar">
+                <a href="#home" class="active">Home</a>
+                <a href="#education">Education</a>
+                <a href="#Certified">Certified</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+        </header>
+
+        <section class="home" id="home">
+            <div class="home-content">
+                <h1>Hi , its <span>Faiq</span></h1>
+                <h3 class="text-animation">I'm a <span></span></h3>
+                <p>Hello, my name is Muhammad Faiqul Umam Dzunnuroeni, and I am currently pursuing a Bachelor's degree in Information Systems at UIN Syarif Hidayatullah Jakarta. I have a strong interest in technology and enjoy exploring how it can be used to solve real-world problems. My academic journey is focused on enhancing my skills in this field, and I'm excited to learn more about the latest trends and innovations in tech.</p>
+                
+
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/mfaiquludz" <i class='bx bxl-linkedin'></i></a>
+                    <a href="https://github.com/AL-Qudzzz" <i class='bx bxl-github'></i></a>
+                    <a href="https://www.instagram.com/qudznnrn?igsh=MXV1Y3VqMXk2bWU4Zg==" <i class='bx bxl-instagram-alt'></i></a>
+                    <a href="#" <i class='bx bxl-twitter'></i></a>
+                    
+                </div>
+                <div class="btn-group">
+                    <a href="#contact" class="btn">Contact</a>
+                    <a href="#"></a>
+                </div>
+            </div>
+
+            <div class="home-img">
+                <img src="./img/Profile.jpg"  alt="">
+            </div>
+          
+        </section>
+
+        <section class="education" id="education">
+            <h2>Education</h2>
+            <ul class="education-list">
+                <li class="education-item">
+                    <img src="./img/uinlogo.png" alt="University Logo" class="education-logo">
+                    <p><strong>State Islamic University of Jakarta | 2024 - 2028</strong><br>Bachelor of Computer in System Information</p>
+                </li>
+                <li class="education-item">
+                    <img src="./img/triguna.png" alt="Vocational School Logo" class="education-logo">
+                    <p><strong>Triguna Utama Vocational School | 2021 - 2024</strong><br>Focused in Computer and Network Engineering</p>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Certified Section -->
+    <section id="Certified" class="certified-section">
+        <h1 style="margin-top: 70px;">My Certifications</h1>
+        <div class="certificates-container">
+            <!-- Certificate 1 -->
+            <div class="certificate">
+                <img src="./img/Algorithm.jpg" alt="Certificate 1">
+                <h3>Algorithm & Progamming</h3>
+                <p>Issued by: Camp404</p>
+                <p>Date: January 2021</p>
+            </div>
+            <!-- Certificate 2 -->
+            <div class="certificate">
+                <img src="./img/Networking.jpg" alt="Certificate 2">
+                <h3>Networking Fundamentals</h3>
+                <p>Issued by: Camp404</p>
+                <p>Date: February 2021</p>
+            </div>
+            <!-- Certificate 3 -->
+            <div class="certificate">
+                <img src="./img/Basic Web.jpg" alt="Certificate 3">
+                <h3>Basic Web Progamming</h3>
+                <p>Issued by: Camp404</p>
+                <p>Date: March 2021</p>
+            </div>
+        </div>
+    </section>
+
+
+       <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const educationItems = document.querySelectorAll('.education-item');
+
+            // Function to check if an element is in the viewport
+            function isInViewport(el) {
+                const rect = el.getBoundingClientRect();
+                return (
+                    rect.top >= 0 &&
+                    rect.left >= 0 &&
+                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                );
+            }
+
+            
+        });
+
+
+        // Toggle Navbar for Mobile
+        const menuIcon = document.getElementById('menu-icon');
+        const navbar = document.querySelector('.navbar');
+
+        menuIcon.addEventListener('click', () => {
+            navbar.classList.toggle('active');
+        });
+
+        // Add interactive hover effects with JavaScript
+        const certificates = document.querySelectorAll('.certificate');
+
+        certificates.forEach(certificate => {
+            certificate.addEventListener('mouseenter', () => {
+                certificate.style.transform = 'scale(1.05)';
+                certificate.style.transition = 'transform 0.3s ease';
+            });
+
+            certificate.addEventListener('mouseleave', () => {
+                certificate.style.transform = 'scale(1)';
+            });
+        });
+
+        // Smooth scroll for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        </script>
+    </body>
+</html>            
