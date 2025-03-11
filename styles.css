@@ -468,7 +468,6 @@ ul.education-list {
 .project-section {
   text-align: center;
   padding: 50px 20px;
-  background: black;
   color: white;
 }
 
@@ -515,7 +514,7 @@ ul.education-list {
 }
 
 .modal-content {
-  background: white;
+  background: black;
   padding: 20px;
   width: 50%;
   max-width: 600px;
@@ -523,6 +522,9 @@ ul.education-list {
   border-radius: 8px;
   text-align: center;
   position: relative;
+  max-height: 80vh;
+  overflow-y: auto;
+  color: white;
 }
 
 .modal-content img,
@@ -552,4 +554,85 @@ ul.education-list {
   .modal-content {
     width: 80%;
   }
+}
+
+/* Tech Skills Section */
+.tech-skills {
+  text-align: center;
+  padding: 50px 20px;
+  background: black;
+  color: white;
+}
+
+.tech-skills h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+/* Skill Container */
+.skills-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Dua kolom */
+  grid-template-rows: auto auto auto; /* Tiga baris */
+  gap: 20px;
+  width: 80%;
+  margin: auto;
+}
+
+.skill-card:nth-child(3) {
+  grid-column: span 2; /* Baris ke-3 menempati dua kolom */
+}
+
+/* Skill Box */
+.skill {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 90%;
+}
+
+/* Logo */
+.skill img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+/* Progress Bar */
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background-color: #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress {
+  height: 100%;
+  width: 0;
+  background-color: teal;
+  border-radius: 5px;
+  transition: width 1.5s ease-in-out;
+  position: relative;
+}
+
+.progress::after {
+  content: attr(data-level); /* Tampilkan level di atas progress bar */
+  position: absolute;
+  right: 5px;
+  top: -25px;
+  font-size: 14px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 3px 6px;
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.progress:hover::after {
+  opacity: 1;
 }

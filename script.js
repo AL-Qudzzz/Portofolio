@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-// Toggle Navbar for Mobile
+//Navbar for Mobile
 const menuIcon = document.getElementById("menu-icon");
 const navbar = document.querySelector(".navbar");
 
@@ -26,7 +26,6 @@ menuIcon.addEventListener("click", () => {
   navbar.classList.toggle("active");
 });
 
-// Add interactive hover effects with JavaScript
 const certificates = document.querySelectorAll(".certificate");
 
 certificates.forEach((certificate) => {
@@ -40,7 +39,7 @@ certificates.forEach((certificate) => {
   });
 });
 
-// Smooth scroll for internal links
+// Smooth scroll
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
@@ -67,3 +66,14 @@ window.onclick = function (event) {
     }
   });
 };
+
+document.addEventListener("DOMContentLoaded", () => {
+  const progressBars = document.querySelectorAll(".progress");
+
+  progressBars.forEach((bar) => {
+    const width = bar.getAttribute("data-width");
+    setTimeout(() => {
+      bar.style.width = width;
+    }, 500); // Delay animasi agar terlihat smooth
+  });
+});

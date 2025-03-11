@@ -19,6 +19,7 @@
                 <a href="#home" class="active">Home</a>
                 <a href="#education">Education</a>
                 <a href="#Certified">Certified</a>
+                <a href="#tech-skills">Skilss</a>
                 <a href="#projects">Project</a>
             </nav>
 
@@ -115,28 +116,67 @@
             </div>
         </section>
 
-                <!-- Project Section -->
+        <section class="tech-skills" id="tech-skills">
+            <h2>Tech Skills</h2>
+            <div class="skills-container">
+                <!-- Skill HTML -->
+                <div class="skill">
+                    <img src="./skillsrc/html.png" title="html icons" alt="HTML Logo">
+                    <h3>HTML</h3>
+                    <div class="progress-bar">
+                        <div class="progress" data-width="75%" data-level="Intermediate"></div>
+                    </div>
+                </div>
+        
+                <!-- Skill CSS -->
+                <div class="skill">
+                    <img src="./skillsrc/css.png" alt="CSS Logo">
+                    <h3>CSS</h3>
+                    <div class="progress-bar">
+                        <div class="progress" data-width="70%" data-level="Intermediate"></div>
+                    </div>
+                </div>
+        
+                <!-- Skill JavaScript -->
+                <div class="skill">
+                    <img src="./skillsrc/java-script.png" alt="JavaScript Logo">
+                    <h3>JavaScript</h3>
+                    <div class="progress-bar">
+                        <div class="progress" data-width="50%" data-level="beginner"></div>
+                    </div>
+                </div>
+        
+                <!-- Skill Kotlin -->
+                <div class="skill">
+                    <img src="./skillsrc/kotlin.svg" alt="Kotlin Logo">
+                    <h3>Kotlin</h3>
+                    <div class="progress-bar">
+                        <div class="progress" data-width="40%" data-level="beginner"></div>
+                    </div>
+                </div>
+        
+                <!-- Skill MySQL -->
+                <div class="skill">
+                    <img src="./skillsrc/sql.png" alt="MySQL Logo">
+                    <h3>MySQL</h3>
+                    <div class="progress-bar">
+                        <div class="progress" data-width="35%" data-level="Beginner"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Project Section -->
         <section id="projects" class="project-section">
             <h2>My Projects</h2>
             <div class="projects-container">
                 
                 <!-- Project 1 -->
                 <div class="project" onclick="openModal('project1')">
-                    <img src="./img/myquran.jpeg" alt="Project 1">
+                    <img src="./projectsrc/myquran.jpeg" alt="Project 1">
                     <h3>MyQuran App</h3>
                 </div>
 
-                <!-- Project 2 -->
-                <div class="project" onclick="openModal('project2')">
-                    <img src="./img/project2-thumbnail.jpg" alt="Project 2">
-                    <h3>Eco-Shop E-commerce</h3>
-                </div>
-
-                <!-- Project 3 -->
-                <div class="project" onclick="openModal('project3')">
-                    <img src="./img/project3-thumbnail.jpg" alt="Project 3">
-                    <h3>Portfolio Website</h3>
-                </div>
 
             </div>
         </section>
@@ -146,36 +186,10 @@
             <div class="modal-content">
                 <span class="close" onclick="closeModal('project1')">&times;</span>
                 <h2>MyQuran App</h2>
-                <p>Aplikasi Al-Qur'an yang menampilkan daftar surah dan fitur pencarian.</p>
-                <img src="./img/myquran-doc.jpg" alt="MyQuran App Screenshot">
-                <video controls>
-                    <source src="./video/myquran-demo.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-        </div>
-
-        <div id="project2" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeModal('project2')">&times;</span>
-                <h2>Eco-Shop E-commerce</h2>
-                <p>Website e-commerce yang menjual produk ramah lingkungan dengan fitur sorting dan animasi interaktif.</p>
-                <img src="./img/ecoshop-doc.jpg" alt="Eco-Shop Screenshot">
-                <video controls>
-                    <source src="./video/ecoshop-demo.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-        </div>
-
-        <div id="project3" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeModal('project3')">&times;</span>
-                <h2>Portfolio Website</h2>
-                <p>Website portofolio interaktif dengan animasi dan tampilan modern.</p>
-                <img src="./img/portfolio-doc.jpg" alt="Portfolio Screenshot">
-                <video controls>
-                    <source src="./video/portfolio-demo.mp4" type="video/mp4">
+                <p style="margin-top: 10px; font-size: 15px;">Aplikasi Al-Qur'an yang menampilkan daftar surah dan fitur pencarian.</p>
+                <img src="./projectsrc/myqurandokum.jpeg" alt="MyQuran App Screenshot">
+                <video controls muted>
+                    <source src="./projectsrc/demoquran.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
