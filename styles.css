@@ -556,7 +556,7 @@ ul.education-list {
   }
 }
 
-/* Tech Skills Section */
+/* Tech Skills Section------------------------------------- */
 .tech-skills {
   text-align: center;
   padding: 50px 20px;
@@ -572,7 +572,7 @@ ul.education-list {
 /* Skill Container */
 .skills-container {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Dua kolom */
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto auto; /* Tiga baris */
   gap: 20px;
   width: 80%;
@@ -635,4 +635,12 @@ ul.education-list {
 
 .progress:hover::after {
   opacity: 1;
+}
+
+.skill:hover {
+  box-shadow: 0px 4px 15px var(--main-color);
+  transform: scale(1.05);
+}
+.skill:hover .progress {
+  transition: width 0.3s ease-in-out; /* Animasi lebih cepat saat hover */
 }
