@@ -644,3 +644,16 @@ ul.education-list {
 .skill:hover .progress {
   transition: width 0.3s ease-in-out; /* Animasi lebih cepat saat hover */
 }
+
+/*Footer------------------------------------------*/
+.watermark {
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  position: relative;
+  bottom: 0;
+  left: 0;
+}
